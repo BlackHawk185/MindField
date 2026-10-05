@@ -1,0 +1,84 @@
+{
+  "version": "1.0",
+  "title": "Mindfield network",
+  "overview": {
+    "central_question": "How can a person externalize a mental model so an AI can understand the whole pattern before inspecting individual concepts?",
+    "pattern": "Mindfield is a spatial discussion: a cyan core premise branches into interface intent, reuse across projects, and possible runtime forms.",
+    "reading_order": ["core premise", "relationships", "concept details"]
+  },
+  "relationships": [
+    { "id": "c1", "from": "b1", "to": "b2", "label": "shapes" },
+    { "id": "c2", "from": "b1", "to": "b3", "label": "informs" },
+    { "id": "c3", "from": "b1", "to": "b5", "label": "leads to" },
+    { "id": "c4", "from": "b4", "to": "b1", "label": "challenges" },
+    { "id": "core-to-ui", "from": "b1", "to": "ui-changes", "label": "is expressed through" },
+    { "id": "core-to-usage", "from": "b1", "to": "how-to-use", "label": "becomes useful through" },
+    { "id": "usage-to-vscode", "from": "how-to-use", "to": "vscode-integration", "label": "adapts to" },
+    { "id": "usage-to-app", "from": "how-to-use", "to": "web-local-app", "label": "runs as" }
+  ],
+  "bubbles": [
+    {
+      "id": "b1",
+      "title": "What is Mindfield?",
+      "detail": "Mindfield is a spatial reasoning surface: a person externalizes a mental model as connected concepts, and an AI can inspect, question, extend, and reuse the same graph as structured thought.",
+      "color": "#27d8e6",
+      "position": [0, 0.4, 0]
+    },
+    {
+      "id": "b2",
+      "title": "Design language",
+      "detail": "A visual system that makes complexity feel calm.",
+      "color": "#d96c4b",
+      "position": [-3.4, 1.8, -0.5]
+    },
+    {
+      "id": "b3",
+      "title": "AI context",
+      "detail": "Structured context that stays legible to both humans and models.",
+      "color": "#77a8a1",
+      "position": [3.2, 1.7, -0.3]
+    },
+    {
+      "id": "b4",
+      "title": "Open question",
+      "detail": "What should this become when the structure changes?",
+      "color": "#e59a42",
+      "position": [-2.6, -1.9, -0.4]
+    },
+    {
+      "id": "b5",
+      "title": "Next move",
+      "detail": "Turn a promising thread into something testable.",
+      "color": "#d96c4b",
+      "position": [2.6, -1.6, 0.2]
+    },
+    {
+      "id": "ui-changes",
+      "title": "How should this feel?",
+      "detail": "The human adaptation should feel like a calm 3D discussion: spatial bubbles, minimal chrome, direct editing, and gestures that preserve the feeling of thinking in a field.",
+      "color": "#9b8cff",
+      "position": [-3.4, 0.1, -0.5]
+    },
+    {
+      "id": "how-to-use",
+      "title": "How do we use this elsewhere?",
+      "detail": "Use Mindfield as a portable reasoning layer for other work: capture concepts here, connect their meaning, then let a project-specific tool read the graph instead of rebuilding context from scratch.",
+      "color": "#f2b45f",
+      "position": [3.3, 0.1, -0.4]
+    },
+    {
+      "id": "vscode-integration",
+      "title": "VS Code integration",
+      "detail": "Package Mindfield as a reusable workspace companion: open the graph beside code, expose project context to agents, and persist the graph in the repository so setup is not repeated.",
+      "color": "#71b7ff",
+      "position": [4.5, 2.1, -0.5]
+    },
+    {
+      "id": "web-local-app",
+      "title": "Web or local app",
+      "detail": "Start as a local-first web app with a portable graph file. A future hosted mode can sync graphs, but the canonical document should remain inspectable and usable without a service.",
+      "color": "#8ed6b2",
+      "position": [1.8, 3.2, -0.8]
+    }
+  ]
+}

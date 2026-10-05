@@ -1,0 +1,57 @@
+{
+  "name": "mindfield",
+  "private": true,
+  "version": "0.0.2",
+  "publisher": "mindfield",
+  "description": "A spatial AI reasoning graph for project workspaces",
+  "main": "./extension/extension.js",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "activationEvents": [
+    "onCommand:mindfield.open"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "mindfield.open",
+        "title": "Mindfield: Open Graph"
+      },
+      {
+        "command": "mindfield.openFile",
+        "title": "Mindfield: Open Graph File"
+      },
+      {
+        "command": "mindfield.openDevTools",
+        "title": "Mindfield: Open Webview Developer Tools"
+      }
+    ]
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc -b && vite build",
+    "package:extension": "npm run build && vsce package --allow-missing-repository",
+    "install:extension": "npm run package:extension && code.cmd --install-extension mindfield-0.0.2.vsix --force",
+    "lint": "oxlint",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "node-hid": "^3.4.0"
+  },
+  "devDependencies": {
+    "@react-three/drei": "^10.7.8",
+    "@react-three/fiber": "^9.7.0",
+    "lucide-react": "^1.47.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "three": "^0.186.0",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "oxlint": "^1.81.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0"
+  }
+}

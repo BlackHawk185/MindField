@@ -1,0 +1,130 @@
+{
+  "version": "1.0",
+  "title": "Mindfield project",
+  "metadata": {
+    "purpose": "Canonical project memory for an AI reasoning graph expressed through a 3D editor.",
+    "audience": "An AI reasoning over concepts, context, spatial relationships, and open questions.",
+    "core_question": "How can spatial relationships preserve the structure of a person's thinking when shared with an AI?",
+    "working_principles": [
+      "Relationships are first-class data, not visual decoration.",
+      "Every edit should be saved to the graph document.",
+      "The spatial canvas should stay calm and uncluttered.",
+      "The graph should be self-describing: concepts, context, positions, and relationship labels should stand on their own without interpreting pixels.",
+      "The frontend is a human adaptation of the graph, never a second knowledge layer."
+    ],
+    "implementation": {
+      "framework": "React + TypeScript + Vite",
+      "scene": "Three.js through React Three Fiber",
+      "persistence": "Local storage and graph export using thought-network.graph.json as the document shape",
+      "interaction": "Orbit canvas, drag bubbles, double-click to create, C to connect, right-click to delete"
+    }
+  },
+  "bubbles": [
+    {
+      "id": "project-purpose",
+      "title": "Shared brain",
+      "detail": "This is a shared thought network: a person constructs a mental model spatially, then an AI can inspect the same concepts and relationships as structured data.",
+      "type": "idea",
+      "color": "#d96c4b",
+      "position": [0, 1.3, 0]
+    },
+    {
+      "id": "ai-readable-document",
+      "title": "AI-readable graph document",
+      "detail": "The save file is a normalized document with stable bubble IDs, semantic context, world positions, colors, types, and labeled connections. It is the project's canonical reasoning surface.",
+      "type": "reference",
+      "color": "#77a8a1",
+      "position": [3.2, 1.8, -0.4]
+    },
+    {
+      "id": "spatial-thinking",
+      "title": "Spatial thinking",
+      "detail": "3D position communicates proximity, clusters, distance, and perspective. The canvas is for constructing and revising a mental model rather than decorating a diagram.",
+      "type": "idea",
+      "color": "#d96c4b",
+      "position": [-3.4, 1.7, -0.2]
+    },
+    {
+      "id": "ai-reasoning-substrate",
+      "title": "AI reasoning substrate",
+      "detail": "The graph is the canonical reasoning substrate. The interface is only a human-friendly projection for constructing, inspecting, and revising it; it does not contain a separate human layer or AI layer.",
+      "type": "idea",
+      "color": "#d96c4b",
+      "position": [3.1, -1.5, 0.1]
+    },
+    {
+      "id": "calm-canvas",
+      "title": "Calm canvas",
+      "detail": "The interface should avoid permanent inspector chrome, creation clutter, and accidental movement. Editing should happen in spatial panels attached to the relevant bubble.",
+      "type": "idea",
+      "color": "#d96c4b",
+      "position": [-2.8, -1.6, 0.2]
+    },
+    {
+      "id": "relationship-semantics",
+      "title": "Relationship semantics",
+      "detail": "A line needs a label such as shapes, informs, challenges, or related to. Future versions should make labels editable so the AI can distinguish causal, evidential, temporal, and associative links.",
+      "type": "question",
+      "color": "#e59a42",
+      "position": [0, -2.5, -0.5]
+    },
+    {
+      "id": "next-step-import",
+      "title": "Import and versioning",
+      "detail": "The next durable step is file import plus graph history, so a network can travel between sessions, tools, and AI conversations without relying only on browser local storage.",
+      "type": "question",
+      "color": "#e59a42",
+      "position": [-0.2, 3.0, -0.8]
+    },
+    {
+      "id": "ui-changes",
+      "title": "UI changes",
+      "detail": "The human adaptation should stay quiet and direct: spatial bubbles, minimal chrome, natural editing, and gestures that preserve the feeling of thinking in a field.",
+      "color": "#9b8cff",
+      "position": [-3.4, 0.1, -0.5]
+    },
+    {
+      "id": "how-to-use",
+      "title": "How to use this",
+      "detail": "Use Mindfield as a portable reasoning layer for other work: capture concepts here, connect their meaning, then let a project-specific tool read the graph instead of rebuilding context from scratch.",
+      "color": "#f2b45f",
+      "position": [3.3, 0.1, -0.4]
+    },
+    {
+      "id": "fusion360-add-in",
+      "title": "Fusion 360 add-in",
+      "detail": "A project adapter could read selected graph concepts as design intent, constraints, or manufacturing decisions, then write observations and open questions back into the same graph.",
+      "color": "#f2b45f",
+      "position": [5.5, -1.7, -0.7]
+    },
+    {
+      "id": "vscode-integration",
+      "title": "VS Code integration",
+      "detail": "Package Mindfield as a reusable workspace companion: open the graph beside code, expose project context to agents, and persist the graph in the repository so setup is not repeated.",
+      "color": "#71b7ff",
+      "position": [4.5, 2.1, -0.5]
+    },
+    {
+      "id": "web-local-app",
+      "title": "Web or local app",
+      "detail": "Start as a local-first web app with a portable graph file. A future hosted mode can sync graphs, but the canonical document should remain inspectable and usable without a service.",
+      "color": "#8ed6b2",
+      "position": [1.8, 3.2, -0.8]
+    }
+  ],
+  "connections": [
+    { "id": "project-purpose-to-document", "from": "project-purpose", "to": "ai-readable-document", "label": "requires" },
+    { "id": "project-purpose-to-spatial", "from": "project-purpose", "to": "spatial-thinking", "label": "expressed through" },
+    { "id": "document-to-loop", "from": "ai-readable-document", "to": "ai-reasoning-substrate", "label": "enables" },
+    { "id": "spatial-to-calm", "from": "spatial-thinking", "to": "calm-canvas", "label": "shaped by" },
+    { "id": "calm-to-loop", "from": "calm-canvas", "to": "ai-reasoning-substrate", "label": "supports" },
+    { "id": "document-to-semantics", "from": "ai-readable-document", "to": "relationship-semantics", "label": "needs" },
+    { "id": "semantics-to-loop", "from": "relationship-semantics", "to": "ai-reasoning-substrate", "label": "improves" },
+    { "id": "document-to-import", "from": "ai-readable-document", "to": "next-step-import", "label": "evolves into" },
+    { "id": "purpose-to-ui", "from": "project-purpose", "to": "ui-changes", "label": "is expressed through" },
+    { "id": "purpose-to-usage", "from": "project-purpose", "to": "how-to-use", "label": "becomes useful through" },
+    { "id": "usage-to-fusion", "from": "how-to-use", "to": "fusion360-add-in", "label": "adapts to" },
+    { "id": "usage-to-vscode", "from": "how-to-use", "to": "vscode-integration", "label": "adapts to" },
+    { "id": "usage-to-app", "from": "how-to-use", "to": "web-local-app", "label": "runs as" }
+  ]
+}
